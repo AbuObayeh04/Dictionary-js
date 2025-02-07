@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dictionary</title>
+  <link rel="stylesheet" href="src/output.css" />
+</head>
+
+<body>
+
+  <body class="py-10 flex flex-col justify-center items-center min-h-lvh bg-gray-200">
+    <h1 class="text-blue-600 text-4xl font-bold mb-8">Dictionary 📘</h1>
+    <div class="flex space-x-4 mb-8 w-1/2 justify-center">
+      <input id="input"
+        class="border border-gray-300 rounded-lg p-3 w-72 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        type="text" placeholder="Write a Word..." autofocus />
+      <button class="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white px-4 py-2 rounded-lg transition"
+        id="search-btn">
+        Search
+      </button>
+    </div>
+
+    <div id="result" class="bg-white p-6 rounded-2xl shadow-lg w-1/2 hidden">
+      <h2 class="text-1xl font-semibold text-gray-800">
+        Word: <span id="word" class="font-bold">Hello</span>
+      </h2>
+      <ul class="mt-2 text-gray-700 flex flex-col " id="definition"></ul>
+
+      <ul class="mt-2 text-gray-700 flex flex-col " id="examples"></ul>
+
+      <p id="wiki" class="mt-2 text-blue-800 underline font-bold"></p>
+    </div>
+
+    <div class="text-red-500 mt-4 hidden" id="error"></div>
+
+    <script src="script.js"></script>
+  </body>
+</body>
+
+</html>
